@@ -6,7 +6,7 @@
   </head>
   <body>
   <header class="page-header">
-    <a class="page-header-logo">
+    <a class="page-header__logo logo">
       <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип города Седона">
     </a>
     <nav class="main-nav">
@@ -29,26 +29,21 @@
     <section class="intro">
       <div class="intro__wrapper">
         <h2 class="visually-hidden">Рекламное описание городка Седона</h2>
-        <header class="intro__header">
-          <img src="img/text-index.svg" alt="Рекламное описание городка Седона">
-        </header>
-        <b class="intro__title">Седона &mdash; небольшой<br> городок в Аризоне,<br> заслуживающий большего!</b>
-        <p class="intro__text">Рассмотрим 5 причин, по которым<br> Седона круче, чем Гранд Каньон!</p>
+        <img src="img/text-index.svg" alt="Рекламное описание городка Седона">
       </div>
     </section>
 
     <section class="advantages">
       <div class="advantages__wrapper">
-        <h2 class="visually-hidden">Преимущества городка Седона</h2>
+        <h2 class="advantages__title">Седона &mdash; небольшой<br> городок в Аризоне,<br> заслуживающий большего!</h2>
+        <p class="advantages__text">Рассмотрим 5 причин, по которым<br> Седона круче, чем Гранд Каньон!</p>
         <ol class="advantages__list">
           <li class="advantages__item">
             <h3 class="advantages__title">Настоящий городок</h3>
             <span class="advantages__number">&ndash; №1 &ndash;</span>
             <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
-            <a href="" class="advantages__link">
-              <img src="img/photo-city@1x1.jpg" width="320" height="260" alt="Фото здания в городке Седона">
-            </a>
-            <ul class="advantages__features features-list">
+            <img src="img/photo-city@1x1.jpg" width="320" height="260" alt="Фото здания в городке Седона">
+            <ul class="advantages__features features">
               <li class="features__item features__item--home">
                 <b class="features__title">Жилье</b>
                 <p class="features__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -67,9 +62,7 @@
             <h3 class="advantages__title">Там есть мост дьявола</h3>
             <span class="advantages__number">&ndash; №2 &ndash;</span>
             <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-            <a href="" class="advantages__link">
-              <img src="img/photo-bridge@1x1.jpg" width="320" height="260" alt="Фото Моста Дьявола в городке Седона">
-            </a>
+            <img src="img/photo-bridge@1x1.jpg" width="320" height="260" alt="Фото Моста Дьявола в городке Седона">
           </li>
           <li class="advantages__item">
             <h3 class="advantages__title">Небольшая площадь</h3>
@@ -95,7 +88,7 @@
         <h2 class="visually-hidden">Поиск и заказ гостиницы в городке Седона</h2>
         <b class="order__title">Заинтересовались?</b>
         <p class="order__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a href="order.html" class="order__link button">Найти гостиницу</a>
+        <a class="order__link button" href="order.html">Найти гостиницу</a>
       </div>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209676.16853135847!2d-111.82234746813533!3d34.801158081495956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1605446211114!5m2!1sru!2sru" width="320" height="350" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </section>
@@ -103,11 +96,21 @@
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <a href="#" class="page-footer__link"></a>
-      <ul class="page-footer__social social"></ul>
+      <a class="page-footer__link" href="#">#visitsedona</a>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="" >Twitter</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook"  href="">Facebook</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="">Youtube</a>
+        </li>
+      </ul>
       <div class="page-footer__copyright copyright">
-        <b class="copyright_text">Разработано</b>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" >
           <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy">
         </a>
       </div>
