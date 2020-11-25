@@ -33,15 +33,24 @@
 }
 
 .page-form__field {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
   border: none;
   background-color: @bg_input;
   padding: 18px 20px 14px 22px;
 }
 
-.page-form__field::placeholder {
-  font-size: 18px;
-  line-height: 26px;
-  color: @black;
+.page-form {
+  &__field::placeholder,
+  &__comment::placeholder {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+    color: @rgba_black;
+    opacity: 1;
+  }
 }
 
 .page-form__comment {
@@ -51,8 +60,14 @@
   width: 100%;
 }
 
-.page-form__comment::placeholder {
+.radio__desc {
   font-size: 18px;
   line-height: 26px;
-  color: @black;
+  font-weight: bold;
+}
+
+.checkbox__desc {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
 }
