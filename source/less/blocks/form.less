@@ -33,12 +33,21 @@
 }
 
 .page-form__field {
+  padding: 18px 20px 14px 22px;
+}
+
+.page-form {
+  &__field,
+  &__comment {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
+  font-weight: bold;
   line-height: 26px;
   border: none;
+  color: @rgba_black;
+  opacity: 1;
   background-color: @bg_input;
-  padding: 18px 20px 14px 22px;
+  }
 }
 
 .page-form {
@@ -54,8 +63,6 @@
 }
 
 .page-form__comment {
-  background-color: @bg_input;
-  border: none;
   padding: 13px 29px 23px 21px;
   width: 100%;
 }
