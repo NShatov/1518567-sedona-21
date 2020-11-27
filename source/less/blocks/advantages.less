@@ -27,6 +27,11 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-rows: 256px auto 256px 256px;
+  }
 }
 
 .advantages__item:nth-of-type(-n+2) {
@@ -41,6 +46,11 @@
 
 .advantages__item {
   padding-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .advantages__number {
