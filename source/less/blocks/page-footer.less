@@ -1,12 +1,17 @@
 .page-footer {
-  @media (min-width: @tablet-width) {
-    grid-column: 1 / 4;
-  }
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .page-footer__wrapper {
   padding: 30px 20px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .page-footer__heshtag {
