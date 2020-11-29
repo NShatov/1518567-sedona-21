@@ -42,30 +42,35 @@
     grid-row-start: 1;
     grid-row-end: 3;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 256px 1fr;
   }
-}
 
-.advantages__box:first-child {
-  @media (min-width: @tablet-width) {
-    flex-grow: 1;
-    flex-basis: 256px;
+  .advantages__box {
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
   }
-}
 
-.advantages__image:first-child {
-  @media (min-width: @tablet-width) {
-    flex-grow: 3;
+  .advantages__image {
+    @media (min-width: @tablet-width) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
   }
 }
 
 .features {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
 }
 
 .advantages__item:nth-child(2) {
@@ -74,39 +79,40 @@
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
-    display: flex;
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
-}
 
-.advantages__box:nth-child(2) {
-  @media (min-width: @tablet-width) {
-    flex-grow: 1;
-    flex-basis: 256px;
+  .advantages__box {
+    @media (min-width: @tablet-width) {
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
   }
-}
 
-.advantages__image:last-child {
-  @media (min-width: @tablet-width) {
-    flex-grow: 3;
+  .advantages__image:nth-child(2) {
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 1;
+    }
   }
 }
 
 .advantages__box {
   background-color: @bg_blue;
   color: @white;
+
   @media (min-width: @tablet-width) {
-    padding: 40px 32px 44px;
+    padding: 40px 32px;
   }
 }
 
 .advantages__item:nth-of-type(n+3) {
   background-color: @bg_grey;
   border-bottom: 1px solid @border_grey;
-}
-
-.advantages__item {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .advantages__number {
