@@ -1,3 +1,8 @@
+body {
+  background-color: @bg_input;
+  mix-blend-mode: normal;
+}
+
 img {
   width: 100%;
 }
@@ -11,6 +16,7 @@ img {
 .container {
   min-width: 320px;
   margin: 0 auto;
+  background: @white;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -21,7 +27,8 @@ img {
 
   @media (min-width: @desktop-width) {
     max-width: 1200px;
-    padding: 0 40px;
+    mix-blend-mode: normal;
+    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
   }
 }
 
