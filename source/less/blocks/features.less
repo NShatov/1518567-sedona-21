@@ -1,9 +1,15 @@
 .features {
   background-color: @white;
   color: @black;
-  padding-left: 50px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .features__title {
@@ -14,4 +20,13 @@
 
 .features__text {
   color: @grey_text;
+}
+
+.features__item {
+  padding: 30px 70px;
+
+  @media (min-width: @tablet-width) {
+    padding: 45px 0;
+    text-align: center;
+  }
 }
