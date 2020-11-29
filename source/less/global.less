@@ -1,6 +1,6 @@
 body {
-  margin: 0;
-  padding: 0;
+  background-color: @bg_input;
+  mix-blend-mode: normal;
 }
 
 img {
@@ -11,6 +11,25 @@ img {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+  background: @white;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content 1fr min-content;
+    max-width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1200px;
+    mix-blend-mode: normal;
+    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+  }
 }
 
 .visually-hidden {

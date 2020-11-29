@@ -2,11 +2,13 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header class="page-header">
+  <body class="page__body">
+    <div class="container">
+      <header class="page-header">
       <a class="page-header__logo logo">
         <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип города Седона">
       </a>
@@ -40,10 +42,14 @@
           <p class="advantages__text">Рассмотрим 5 причин, по которым<br> Седона круче, чем Гранд Каньон!</p>
           <ol class="advantages__list">
             <li class="advantages__item">
-              <h3 class="advantages__title">Настоящий городок</h3>
-              <span class="advantages__number">&ndash; №1 &ndash;</span>
-              <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
-              <img src="img/photo-city@1x1.jpg" width="320" height="260" alt="Фото здания в городке Седона">
+              <div class="advantages__box">
+                <h3 class="advantages__title">Настоящий городок</h3>
+                <span class="advantages__number">&ndash; №1 &ndash;</span>
+                <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+              </div>
+              <div class="advantages__image">
+                <img src="img/photo-city@1x1.jpg" width="320" height="260" alt="Фото здания в городке Седона">
+              </div>
               <ul class="advantages__features features">
                 <li class="features__item features__item--home">
                   <b class="features__title">Жилье</b>
@@ -60,10 +66,14 @@
               </ul>
             </li>
             <li class="advantages__item">
-              <h3 class="advantages__title">Там есть мост дьявола</h3>
-              <span class="advantages__number">&ndash; №2 &ndash;</span>
-              <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-              <img src="img/photo-bridge@1x1.jpg" width="320" height="260" alt="Фото Моста Дьявола в городке Седона">
+              <div class="advantages__box">
+                <h3 class="advantages__title">Там есть мост дьявола</h3>
+                <span class="advantages__number">&ndash; №2 &ndash;</span>
+                <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+              </div>
+              <div class="advantages__image">
+                <img src="img/photo-bridge@1x1.jpg" width="320" height="260" alt="Фото Моста Дьявола в городке Седона">
+              </div>
             </li>
             <li class="advantages__item">
               <h3 class="advantages__title">Небольшая площадь</h3>
@@ -97,7 +107,7 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <b class="page-footer__heshtag">#visitsedona</b>
+        <p class="page-footer__heshtag">#visitsedona</p>
         <ul class="page-footer__social social">
           <li class="social__item">
             <a class="social__link social__link--twitter" href="" >Twitter</a>
@@ -117,5 +127,7 @@
         </div>
       </div>
     </footer>
+    </div>
+
   </body>
 </html>
