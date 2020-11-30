@@ -31,7 +31,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 256px 1fr 256px 256px;
+    grid-template-rows: min-content 1fr min-content min-content;
   }
 }
 
@@ -43,7 +43,7 @@
     grid-row-end: 3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 256px 1fr;
+    grid-template-rows: min-content 1fr;
   }
 
   .advantages__box {

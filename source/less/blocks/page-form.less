@@ -3,6 +3,14 @@
   padding: 0 20px;
   margin: 0 auto;
   margin-top: 38px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px;
+  }
 }
 
 .page-form__title {
@@ -10,6 +18,10 @@
   line-height: 26px;
   font-weight: bold;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .page-form__text {
@@ -17,4 +29,8 @@
   color: @grey_text;
   padding: 20px 0;
   border-bottom: 1px solid @border_form;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 0;
+  }
 }
