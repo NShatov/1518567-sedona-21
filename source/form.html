@@ -5,8 +5,9 @@
     <title>Форма отзыва о городке Седона</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header class="page-header">
+  <body class="page__body">
+    <div class="container">
+      <header class="page-header">
       <a class="page-header__logo logo" href="index.html">
         <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип города Седона">
       </a>
@@ -37,7 +38,7 @@
           <h2 class="page-form__title">Оставьте свой отзыв</h2>
           <p class="page-form__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           <form method="POST" action="https://echo.htmlacademy.ru/">
-            <fieldset class="page-form__fieldset">
+            <fieldset class="page-form__fieldset full-name">
               <legend class="page-form__legend">Представьтесь:</legend>
               <ul class="page-form__list">
                 <li class="page-form__item">
@@ -54,7 +55,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="page-form__fieldset">
+            <fieldset class="page-form__fieldset contacts">
               <legend class="page-form__legend">Контактная информация:</legend>
               <ul class="page-form__list">
                 <li class="page-form__item">
@@ -67,7 +68,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="page-form__fieldset">
+            <fieldset class="page-form__fieldset impression">
               <legend class="page-form__legend">Ваше общее впечатление:</legend>
               <ul class="page-form__list">
                 <li class="page-form__item">
@@ -90,7 +91,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="page-form__fieldset">
+            <fieldset class="page-form__fieldset attractions">
               <legend class="page-form__legend">Посещенные достопримечательности:</legend>
               <ul class="page-form__list">
                 <li class="page-form__item">
@@ -119,12 +120,14 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="page-form__fieldset">
+            <fieldset class="page-form__fieldset comments">
               <legend class="page-form__legend">Опишите свои эмоции:</legend>
-              <textarea class="page-form__comment" name="comment" id="comment" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea class="page-form__comment" name="comment" id="comment" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
-            <input class="button" type="submit" value="Отправить отзыв">
-            <small class="page-form__note">* &ndash; обязательные поля</small>
+            <div class="page-form__footer">
+              <input class="button page-form__button" type="submit" value="Отправить отзыв">
+              <p class="page-form__note">* &ndash; обязательные поля</p>
+            </div>
           </form>
         </div>
       </section>
@@ -152,5 +155,7 @@
         </div>
       </div>
     </footer>
+    </div>
+
   </body>
 </html>
