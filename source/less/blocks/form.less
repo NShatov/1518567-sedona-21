@@ -4,11 +4,11 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(5, min-content);
     grid-template-areas:
-    "impression name"
-    "contacts contacts"
-    "attractions attractions"
-    "comments comments"
-    "footer footer";
+      "impression name"
+      "contacts contacts"
+      "attractions attractions"
+      "comments comments"
+      "footer footer";
   }
 }
 
@@ -18,6 +18,23 @@
 
 .contacts {
   grid-area: contacts;
+
+  .page-form__field {
+    @media (min-width: @tablet-width) {
+      width: 90%;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 55%;
+    }
+  }
+
+  .page-form__list {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 
 .impression {
@@ -26,13 +43,27 @@
   @media (min-width: @tablet-width) {
     .page-form__legend {
       margin: 0;
-      padding-left: 0
+      padding-left: 0;
     }
   }
 }
 
 .attractions {
   grid-area: attractions;
+
+  .page-form__list {
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, min-content);
+      text-align: center;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 
 .comments {
@@ -41,6 +72,12 @@
 
 .page-form__footer {
   grid-area: footer;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .page-form__fieldset {
@@ -52,13 +89,27 @@
 
   @media (min-width: @tablet-width) {
     border-bottom: 0;
-    &:first-child {
-      border-left: 1px solid @field_grey;
-      padding-left: 50px;
-      padding-bottom: 0
+  }
+}
+
+.page-form__fieldset:first-child {
+  @media (min-width: @tablet-width) {
+    border-left: 1px solid @field_grey;
+    padding-left: auto;
+    padding-bottom: 0;
+  }
+
+  .page-form__list {
+    @media (min-width: @tablet-width) {
+      text-align: right;
     }
   }
 
+  .page-form__field {
+    @media (min-width: @tablet-width) {
+      width: 40%;
+    }
+  }
 }
 
 .page-form__fieldset:nth-child(2n) {
@@ -149,20 +200,13 @@
   font-weight: bold;
 }
 
-.page-form__footer {
-  @media (min-width: @tablet-width) {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .page-form__button {
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 2;
   }
 }
+
 .page-form__note {
   display: none;
 
