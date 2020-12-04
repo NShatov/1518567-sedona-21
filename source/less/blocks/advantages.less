@@ -37,7 +37,10 @@
 
 .advantages__item:first-child {
   @media (min-width: @tablet-width) {
-    grid-area: 1 / 1 / 3 / 4;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 4;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: min-content 1fr;
@@ -66,7 +69,10 @@
 
 .advantages__item:nth-child(2) {
   @media (min-width: @tablet-width) {
-    grid-area: 3 / 1 / 4 / 4;
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-row-end: 4;
+    grid-column-end: 4;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -80,7 +86,10 @@
 
   .advantages__image:nth-child(2) {
     @media (min-width: @tablet-width) {
-      grid-area: 1 / 1 / 1 / 3;
+      grid-row-start: 1;
+      grid-column-start: 1;
+      grid-row-end: 1;
+      grid-column-end: 3;
     }
   }
 }

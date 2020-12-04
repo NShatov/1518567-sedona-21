@@ -29,11 +29,17 @@
 
 .catalog__item:first-child {
   @media (min-width: @tablet-width) {
-    grid-area: 1 / 1 / 2 / 3;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 3;
   }
 
   @media (min-width: @desktop-width) {
-    grid-area: 1 / 1 / 2 / 4;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 4;
   }
 }
 
