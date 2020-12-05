@@ -1,12 +1,24 @@
 .page-catalog__wrapper {
   padding: 30px 20px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 50px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 50px 0;
+  }
 }
 
 .page-catalog__title {
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .page-catalog__text {

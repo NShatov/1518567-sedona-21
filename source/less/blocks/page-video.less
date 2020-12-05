@@ -2,12 +2,40 @@
   margin: 0 auto;
   padding: 30px 20px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 50px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 60px 120px;
+  }
+}
+
+.page-video__box {
+  width: 320px;
+  height: 201px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    height: 500px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+    height: 500px;
+  }
 }
 
 .page-video__title {
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .page-video__description {

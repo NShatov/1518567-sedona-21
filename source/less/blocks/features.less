@@ -3,10 +3,11 @@
   color: @black;
 
   @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 4;
     grid-row-start: 2;
+    grid-column-start: 1;
     grid-row-end: 3;
+    grid-column-end: 4;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
