@@ -1,12 +1,13 @@
 .advatages__wrapper {
   margin: 0 auto;
+  padding: 0 20px 0 20px;
 }
 
 .advantages__caption,
 .advantages__title {
   font-weight: bold;
   font-size: 18px;
-  line-height: 26px;
+  line-height: 27px;
   text-align: center;
   margin: 0;
 }
@@ -20,7 +21,7 @@
   text-align: center;
   color: @grey_text;
   margin: 0;
-  padding: 30px 0;
+  padding: 30px 0 10px 0;
 }
 
 .advantages__list {
@@ -36,6 +37,23 @@
 }
 
 .advantages__item:first-child {
+
+  .advantages__box {
+    padding: 67px 12px 39px 13px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 37px;
+    background-image: url("../img/white_copy.svg");
+    }
+  }
+
+
   @media (min-width: @tablet-width) {
     grid-row-start: 1;
     grid-column-start: 1;
@@ -47,6 +65,7 @@
   }
 
   .advantages__box {
+
     @media (min-width: @tablet-width) {
       grid-column-start: 1;
       grid-column-end: 2;
@@ -63,8 +82,12 @@
 
 .advantages__features {
   margin: 0;
-  padding: 0;
+  padding: 35px 0 30px 70px;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+
+  }
 }
 
 .advantages__item:nth-child(2) {
@@ -78,6 +101,8 @@
   }
 
   .advantages__box {
+    padding: 38px 16px 34px 15px;
+
     @media (min-width: @tablet-width) {
       grid-column-start: 3;
       grid-column-end: 4;
@@ -106,17 +131,70 @@
 .advantages__item:nth-of-type(n+3) {
   background-color: @bg_grey;
   border-bottom: 1px solid @border_grey;
-  padding-top: 30px;
+  padding: 22px 20px 25px;
+}
+
+.advantages__item:last-child {
+  border-bottom: 0;
 }
 
 .advantages__number {
   display: block;
   text-align: center;
-  padding: 20px 0;
+  padding: 15px;
 }
 
 .advantages__description {
   text-align: center;
   margin: 0;
-  padding-bottom: 20px;
+  padding: 0;
 }
+
+.features__item {
+  position: relative;
+}
+
+.features__item--home::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -49px;
+  right: auto;
+  width: 39px;
+  height: 37px;
+  background-image: url("../img/icon-house.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+    left: 40%;
+  }
+}
+
+.features__item--gift::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: -45px;
+  right: auto;
+  width: 32px;
+  height: 38px;
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.features__item--food::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -52px;
+  right: auto;
+  width: 40px;
+  height: 35px;
+  background-image: url("../img/icon-burger.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
