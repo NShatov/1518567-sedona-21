@@ -14,4 +14,17 @@
   background-color: @bg_blue;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: @link_hover;
+  }
+
+  &:active {
+    background-color: @link_active;
+    color: fade(@white, 30%);
+  }
+
+  &:disabled {
+    background-color: @disabled;
+  }
 }
