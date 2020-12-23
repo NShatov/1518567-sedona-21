@@ -5,11 +5,9 @@
 
 .main-nav__wrapper {
   @media (min-width: @tablet-width) {
-    width: 740px;
-    margin: 0 auto;
+    width: 768px;
     background-color: @white;
     color: @black;
-    padding: 0 30px 0 30px;
   }
 }
 
@@ -31,6 +29,7 @@
     color: @black;
     font-size: 14px;
     line-height: 26px;
+    padding: 0 30px;
   }
 }
 
@@ -39,21 +38,49 @@
   text-decoration: none;
   color: inherit;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 6px;
 
-  &:hover {
-    background-color: @link_hover;
-  }
+  @media (max-width: @mobile-width-only) {
+    padding-top: 10px;
+    padding-bottom: 6px;
 
-  &:active {
-    background-color: @link_active;
-    color: fade(@white, 30%);
+    &:hover {
+      background-color: @link_hover;
+    }
+
+    &:active {
+      background-color: @link_active;
+      color: fade(@white, 30%);
+    }
   }
 
   @media (min-width: @tablet-width) {
     padding-top: 16px;
     padding-bottom: 14px;
+
+    &:hover {
+      color: @bg_blue;
+    }
+
+    &:active {
+      color: fade(@black, 30%);
+    }
+  }
+}
+
+.main-nav__link--active {
+  @media (min-width: @tablet-width) {
+    color: @menu-active;
+    mix-blend-mode: normal;
+
+    &:hover {
+      mix-blend-mode: normal;
+      color: @menu-active_hover;
+    }
+
+    &:active {
+      mix-blend-mode: normal;
+      color: fade(@menu-active, 30%);
+    }
   }
 }
 
@@ -110,7 +137,7 @@
 .main-nav--opened .main-nav__toggle {
   top: 17px;
   left: auto;
-  right: 20px;
+  right: 19px;
   width: 23px;
   height: 23px;
   background-color: transparent;
@@ -131,13 +158,13 @@
   &::before {
     transform: rotate(45deg);
     mix-blend-mode: normal;
-    box-shadow: 0px 4px 4px fade(@black, 25%);
+    box-shadow: 0 4px 4px fade(@black, 25%);
   }
 
   &::after {
     transform: rotate(-45deg);
     mix-blend-mode: normal;
-    box-shadow: 0px 4px 4px fade(@black, 25%);
+    box-shadow: 0 4px 4px fade(@black, 25%);
   }
 
   &:hover::before,
@@ -147,7 +174,8 @@
 
   &:active::before,
   &:active::after {
-    background-color: fade(@white, 60%);
+    background-color: fade(@white, 30%);
+    border: none;
   }
 }
 
@@ -171,4 +199,3 @@
 .main-nav--nojs .main-nav__toggle {
   display: none;
 }
-
