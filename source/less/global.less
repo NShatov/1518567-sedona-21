@@ -42,3 +42,15 @@ img {
   border: 0;
   overflow: hidden;
 }
+
+.desktop__break {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.tablet__break {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}

@@ -3,7 +3,8 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    width: 80%;
+    width: 60%;
+    padding: 60px 0 40px;
     margin: 0 auto;
   }
 }
@@ -23,6 +24,16 @@
   line-height: 24px;
   color: @grey_text;
   margin: 22px 0 27px;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 27px 0 40px;
+  }
 }
 
 .order__map {
