@@ -6,17 +6,18 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    height: 56px;
     flex-direction: row;
     justify-content: center;
     grid-column-start: 1;
     grid-column-end: 4;
+    height: 56px;
   }
 }
 
 .page-header__logo {
   position: absolute;
-  left: 34%;
+  left: 50%;
+  transform: translate(-50%);
   bottom: -28px;
   height: 84px;
   order: 2;
@@ -25,10 +26,5 @@
 
   @media (min-width: @tablet-width) {
     top: 0;
-    left: 43%;
-  }
-
-   @media (min-width: @desktop-width) {
-    left: 42%;
   }
 }
