@@ -131,7 +131,13 @@
 }
 
 .advantages__image img {
-  height: 100%;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 256px;
+  }
 }
 
 .advantages__features {
@@ -164,6 +170,7 @@
     @media (min-width: @tablet-width) {
       grid-column-start: 3;
       grid-column-end: 4;
+      padding-bottom: 20px;
     }
 
     @media (min-width: @desktop-width) {
