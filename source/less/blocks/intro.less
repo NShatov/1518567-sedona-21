@@ -1,21 +1,56 @@
 .intro {
-  background-image: url("../img/back-mobile.jpg");
+  background-color: @bg_grey;
+  background-image: url("../img/back-desktop.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: 50% 0;
   background-size: cover;
+  position: relative;
+  overflow: hidden;
 
-  @media (min-width: @tablet-width) {
-    background-image: url("../img/back-desktop.jpg");
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 57px;
+    background-image: url("../img/intro-triangle.svg");
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: cover;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-desktop@2x.jpg");
+    background-size: 2400px auto;
   }
 }
 
 .intro__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: auto;
-  height: 387px;
-  text-align: center;
+  height: 100%;
   padding-top: 90px;
   padding-bottom: 85px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 77px;
+    padding-bottom: 91px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 78px;
+    padding-bottom: 90px;
+  }
+}
+
+.intro__img {
+  @media (min-width: @tablet-width) {
+    width: 461px;
+    height: 350px;
+  }
 }

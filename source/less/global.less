@@ -23,7 +23,7 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: min-content 1fr min-content;
-    max-width: 768px;
+    min-width: 768px;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,3 +42,15 @@ img {
   border: 0;
   overflow: hidden;
 }
+/*
+.desktop__break {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.tablet__break {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}*/
