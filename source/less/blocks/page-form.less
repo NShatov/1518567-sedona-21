@@ -2,13 +2,15 @@
   text-align: center;
   padding: 0 20px;
   margin: 0 auto;
-  margin-top: 38px;
+  margin-top: 35px;
 
   @media (min-width: @tablet-width) {
+    margin-top: 62px;
     padding: 0 60px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 112px;
     padding: 0 120px;
   }
 }
@@ -25,12 +27,20 @@
 }
 
 .page-form__text {
+  margin: 0;
   line-height: 24px;
   color: @grey_text;
-  padding: 20px 0;
+  padding: 30px 0 17px;
   border-bottom: 1px solid @border_form;
 
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
   @media (min-width: @tablet-width) {
+    padding: 34px 0 20px;
     border-bottom: 0;
   }
 }
