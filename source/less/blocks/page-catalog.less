@@ -1,5 +1,5 @@
 .page-catalog__wrapper {
-  padding: 30px 20px;
+  padding: 30px 20px 0;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -15,6 +15,9 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
+  color: @black;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -24,6 +27,17 @@
 .page-catalog__text {
   line-height: 24px;
   color: @grey_text;
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid @border_form;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .page-catalog__list {
