@@ -62,47 +62,6 @@
   }
 }
 
-.page-form__fieldset--full-name {
-  grid-area: name;
-}
-
-.page-form__fieldset--contacts {
-  grid-area: contacts;
-}
-
-.page-form__fieldset--impression {
-  grid-area: impression;
-
-  @media (min-width: @tablet-width) {
-    .page-form__legend {
-      margin: 0;
-      padding-left: 0;
-    }
-  }
-}
-
-.page-form__fieldset--attractions {
-  grid-area: attractions;
-
-  .page-form__list {
-    @media (min-width: @tablet-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(2, min-content);
-      text-align: center;
-    }
-
-    @media (min-width: @desktop-width) {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-}
-
-.page-form__fieldset--comments {
-  grid-area: comments;
-}
-
 .page-form__footer {
   grid-area: footer;
   padding: 43px 0 38px;
@@ -132,7 +91,9 @@
   }
 }
 
-.page-form__fieldset:first-child {
+.page-form__fieldset--full-name {
+  grid-area: name;
+
   .page-form__item {
     display: flex;
     justify-content: flex-start;
@@ -175,7 +136,9 @@
   }
 }
 
-.page-form__fieldset:nth-child(2n) {
+.page-form__fieldset--contacts {
+  grid-area: contacts;
+
   @media (max-width: @mobile-width-only) {
     padding-bottom: 14px;
   }
@@ -247,7 +210,9 @@
   }
 }
 
-.page-form__fieldset:nth-child(3n) {
+.page-form__fieldset--impression {
+  grid-area: impression;
+
   @media (max-width: @mobile-width-only) {
     padding-bottom: 43px;
   }
@@ -266,6 +231,7 @@
 
     @media (min-width: @tablet-width) {
       padding: 0;
+      margin: 0;
     }
 
     @media (min-width: @desktop-width) {
@@ -290,7 +256,9 @@
   }
 }
 
-.page-form__fieldset:nth-child(4n) {
+.page-form__fieldset--attractions {
+  grid-area: attractions;
+
   @media (max-width: @mobile-width-only) {
     padding-bottom: 38px;
   }
@@ -330,9 +298,9 @@
 
     @media (min-width: @desktop-width) {
       width: 100%;
-      justify-content: space-between;
+      justify-content: flex-start;
       min-height: 50px;
-      margin-top: 41px;
+      margin-top: 48px;
     }
   }
 
@@ -349,16 +317,21 @@
 
     @media (min-width: @desktop-width) {
       min-width: 200px;
-      max-width: 240px;
+      max-width: 230px;
+      margin-right: 53px;
+    }
+  }
 
-      .page-form__item:nth-child(4n) {
+  .page-form__item:nth-child(4n) {
+    @media (min-width: @desktop-width) {
       margin-right: 0;
-      }
     }
   }
 }
 
-.page-form__fieldset:last-of-type {
+.page-form__fieldset--comments {
+  grid-area: comments;
+
   .page-form__legend {
     @media (max-width: @mobile-width-only) {
       padding: 18px 0 15px;
