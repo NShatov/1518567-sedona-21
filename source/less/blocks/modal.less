@@ -1,0 +1,129 @@
+.modal {
+  position: fixed;
+  z-index: 10;
+  background-color: @white;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  @media (min-width: @tablet-width) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.modal-success {
+  bottom: 340px;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    bottom: 503px;
+    width: 640px;
+    height: 347px;
+  }
+}
+
+.modal-error {
+  bottom: 315px;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    bottom: 344px;
+    width: 400px;
+    height: 347px;
+  }
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-success__wrap {
+  padding: 30px 38px 51px;
+
+  @media (min-width: @tablet-width) {
+    padding: 49px 98px 45px;
+  }
+}
+
+.modal-error__wrap {
+  padding: 40px 41px 35px;
+
+  @media (min-width: @tablet-width) {
+    padding: 50px 47px;
+  }
+
+  .modal__button {
+    margin-top: 20px;
+    width: 75%;
+
+    @media (min-width: @tablet-width) {
+      width: 90%;
+      margin-top: 39px;
+    }
+  }
+}
+
+.modal__header {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: @black;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.modal__header--error {
+  line-height: 40px;
+}
+
+.modal__description {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  padding-top: 25px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: @grey_text;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 33px;
+  }
+}
+
+.modal__description--gap {
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.modal__button-field {
+  padding: 20px;
+  background-color: @bg_input;
+
+  @media (min-width: @tablet-width) {
+    padding: 44px 91px;
+  }
+}
+
+.modal__button--error {
+  font-size: 18px;
+  line-height: 26px;
+}
