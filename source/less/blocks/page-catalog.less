@@ -3,7 +3,7 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    padding: 50px 60px;
+    padding: 63px 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -38,10 +38,22 @@
       display: none;
     }
   }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 35px;
+    padding-bottom: 76px;
+  }
 }
 
 .page-catalog__list {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.catalog__button--like {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
