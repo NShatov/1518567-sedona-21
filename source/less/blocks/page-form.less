@@ -270,7 +270,7 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 52px;
-    padding-bottom: 67px;
+    padding-bottom: 51px;
   }
 
   .page-form__legend {
@@ -298,14 +298,14 @@
 
     @media (min-width: @desktop-width) {
       width: 100%;
-      justify-content: flex-start;
+      justify-content: space-between;
       min-height: 50px;
-      margin-top: 48px;
+      margin-top: 44px;
     }
   }
 
   .page-form__item {
-    padding-left: 77px;
+    padding-left: 80px;
     margin: 0;
     display: flex;
     align-items: center;
@@ -316,9 +316,18 @@
     }
 
     @media (min-width: @desktop-width) {
-      min-width: 200px;
+      min-width: 205px;
       max-width: 230px;
+      flex-grow: 1;
+      min-height: 56px;
+      margin-bottom: 15px;
       margin-right: 53px;
+    }
+  }
+
+  .page-form__item:nth-child(3n) {
+    @media (min-width: @desktop-width) {
+      margin-right: 33px;
     }
   }
 
