@@ -49,17 +49,6 @@
 
 .catalog__link {
   display: block;
-  height: 280px;
-
-  @media (min-width: @tablet-width) {
-    height: 267px;
-  }
-
-  &--big {
-    @media (min-width: @tablet-width) {
-      height: 400px;
-    }
-  }
 }
 
 .catalog__like {
@@ -68,7 +57,19 @@
 }
 
 .catalog__link img {
-  height: 100%;
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 267px;
+  }
+}
+
+.catalog__img--big {
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
 }
 
 .catalog__wrap {

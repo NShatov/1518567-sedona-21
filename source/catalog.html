@@ -66,11 +66,11 @@
           <p class="page-catalog__text">Не можете решиться на путешествие из-за курса?<br> Фотографии помогут вам забыть о политике и экономике.</p>
           <ul class="page-catalog__list catalog">
             <li class="catalog__item">
-              <a class="catalog__link catalog__link--big" href="#">
+              <a class="catalog__link" href="#">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg, img/photo-1-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg, img/photo-1-tablet@2x.jpg 2x">
-                  <img src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg" alt="Шоссе на фоне заката">
+                  <img class="catalog__img--big" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg" alt="Шоссе на фоне заката">
                 </picture>
               </a>
               <div class="catalog__wrap">
@@ -148,10 +148,14 @@
       <section class="page-video">
         <div class="page-video__wrapper">
           <h2 class="page-video__title">Все еще сомневаетесь?</h2>
-          <p class="page-video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <p class="page-video__description">Смотрите видеопрезентацию и скорее за билетами, пока они<br> не подорожали в очередной раз!</p>
         </div>
         <div class="page-video__box">
-          <video poster="img/video-mobile.jpg" width="320" height="201"></video>
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet.jpg, img/video-tablet@2x.jpg 2x">
+            <img src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Горная дорога">
+          </picture>
           <div class="page-video__controls">
             <button class="page-video__button page-video__button--replay" type="button" aria-label="Смотреть видео">Смотреть видео</button>
             <button class="page-video__button page-video__button--subtitles" type="button" aria-label="Включить субтитры">Включить субтитры</button>

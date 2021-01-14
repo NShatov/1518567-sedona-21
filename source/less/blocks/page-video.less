@@ -13,8 +13,9 @@
 }
 
 .page-video__box {
-  width: 320px;
-  height: 201px;
+  width: 100%;
+  height: auto;
+  padding-top: 34px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
@@ -43,4 +44,10 @@
   line-height: 24px;
   padding-top: 30px;
   margin: 0;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 }
