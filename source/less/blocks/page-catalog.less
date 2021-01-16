@@ -3,11 +3,11 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    padding: 63px 60px;
+    padding: 63px 60px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 50px 0;
+    padding: 100px 0 0;
   }
 }
 
@@ -41,7 +41,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 35px;
-    padding-bottom: 76px;
+    padding-bottom: 77px;
   }
 }
 
@@ -56,4 +56,14 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  width: 23px;
+  height: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    fill: @white;
+  }
 }
