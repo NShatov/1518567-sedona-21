@@ -46,14 +46,33 @@
 }
 
 .order__map {
-  margin: 0;
-  border: none;
-  width: 100%;
-  display: block;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 27px;
+    height: 27px;
+    background-color: @bg_blue;
+    border: 5px solid @white;
+    border-radius: 50%;
+  }
 }
 
 .order__map--img {
   height: 350px;
   object-fit: cover;
   width: 100%;
+}
+
+.order__map--iframe {
+  position: absolute;
+  margin: 0;
+  border: none;
+  width: 100%;
+  top: 0;
+  z-index: 5;
 }
