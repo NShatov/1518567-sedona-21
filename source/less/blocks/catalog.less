@@ -77,6 +77,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    color: @white;
     background-color: fade(@black, 30%);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
@@ -87,11 +88,6 @@
   margin: 0;
   padding: 10px 0 13px;
   text-align: left;
-
-  @media (min-width: @desktop-width) {
-    color: @white;
-    opacity: 1;
-  }
 }
 
 .catalog__author {
@@ -101,8 +97,7 @@
   text-transform: none;
 
   @media (min-width: @desktop-width) {
-    color: @white;
-    opacity: 1;
+    color: inherit;
   }
 }
 
@@ -134,5 +129,6 @@
 
   @media (min-width: @desktop-width) {
     fill: @white;
+    opacity: 1;
   }
 }
