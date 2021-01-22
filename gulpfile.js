@@ -40,7 +40,7 @@ const images = () => {
       }),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("img"));
+    .pipe(gulp.dest("build/img"));
 }
 
 exports.images = images;
@@ -50,7 +50,7 @@ exports.images = images;
 const createWebp = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("img"));
+    .pipe(gulp.dest("source/img/webp"));
 }
 
 exports.createWebp = createWebp;
@@ -79,5 +79,5 @@ const watcher = () => {
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  styles, createWebp, server, watcher
 );
