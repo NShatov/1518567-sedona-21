@@ -119,7 +119,16 @@
     }
   }
 
-  .page-form__field:hover {
+  .page-form__legend {
+    @media (min-width: @tablet-width) {
+      padding: 0;
+      margin: 0;
+      margin-right: auto;
+    }
+  }
+}
+
+.page-form__field:hover {
     background-color: @border_form;
   }
 
@@ -130,15 +139,6 @@
     line-height: 26px;
     font-size: 18px;
   }
-
-  .page-form__legend {
-    @media (min-width: @tablet-width) {
-      padding: 0;
-      margin: 0;
-      margin-right: auto;
-    }
-  }
-}
 
 .page-form__fieldset--contacts {
   grid-area: contacts;

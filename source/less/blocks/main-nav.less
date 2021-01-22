@@ -76,14 +76,9 @@
     color: @menu-active;
     mix-blend-mode: normal;
 
-    &:hover {
-      mix-blend-mode: normal;
-      color: @menu-active_hover;
-    }
-
+    &:hover,
     &:active {
-      mix-blend-mode: normal;
-      color: fade(@menu-active, 30%);
+      color: @menu-active;
     }
   }
 }
