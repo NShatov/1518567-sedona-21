@@ -1,6 +1,7 @@
 .modal {
   position: fixed;
   z-index: 10;
+  display: none;
   background-color: @white;
   text-transform: uppercase;
   mix-blend-mode: normal;
@@ -12,9 +13,12 @@
   }
 }
 
+.modal-show {
+  display: block;
+}
+
 .modal-success {
   bottom: 340px;
-  display: none;
 
   @media (min-width: @tablet-width) {
     bottom: 503px;
@@ -25,7 +29,6 @@
 
 .modal-error {
   bottom: 315px;
-  display: none;
 
   @media (min-width: @tablet-width) {
     bottom: 344px;
