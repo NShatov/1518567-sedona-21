@@ -78,7 +78,7 @@
         <div class="page-form__wrapper">
           <h2 class="page-form__title">Оставьте свой отзыв</h2>
           <p class="page-form__text">Помогите нашим отелям стать лучше! оставьте отзыв о них,<br> а также о посещенных вами достопримечательностях</p>
-          <form method="POST" action="https://echo.htmlacademy.ru/">
+          <form class="page-form__login" method="POST" action="https://echo.htmlacademy.ru/">
             <fieldset class="page-form__fieldset page-form__fieldset--full-name">
               <legend class="page-form__legend">Представьтесь:</legend>
               <ul class="page-form__list">
@@ -101,11 +101,11 @@
               <ul class="page-form__list">
                 <li class="page-form__item">
                   <label class="page-form__desc page-form__desc--phone" for="phone"><span class="invisible">Контактный</span> телефон<sup>*</sup>: </label>
-                  <input class="page-form__field page-form__field--phone" type="tel" id="phone" name="phone" placeholder="Введите телефон">
+                  <input class="page-form__field page-form__field--phone" type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
                 </li>
                 <li class="page-form__item">
                   <label class="page-form__desc page-form__desc--email" for="email">Электронная почта<sup>*</sup>: </label>
-                  <input class="page-form__field page-form__field--email" type="email" id="email" name="email" placeholder="Введите e-mail">
+                  <input class="page-form__field page-form__field--email" type="email" id="email" name="email" placeholder="Введите e-mail" required>
                 </li>
               </ul>
             </fieldset>
@@ -217,7 +217,7 @@
       <div class="modal__wrapper modal-error__wrap">
         <h2 class="modal__header modal__header--error">Что-то пошло<br> не так!</h2>
         <p class="modal__description modal__description--gap">Проверьте поля, выделенные красным,<br> скорее всего вы забыли их заполнить</p>
-        <button class="button modal__button--error modal__button--close" type="button">OK</button>
+        <button class="button modal__button--error modal__button--ok" type="button">OK</button>
       </div>
   </section>
 

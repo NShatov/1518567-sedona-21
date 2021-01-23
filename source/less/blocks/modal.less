@@ -21,14 +21,13 @@
   bottom: 340px;
 
   @media (min-width: @tablet-width) {
-    bottom: 503px;
     width: 640px;
     height: 347px;
   }
 }
 
 .modal-error {
-  bottom: 315px;
+  bottom: 340px;
 
   @media (min-width: @tablet-width) {
     bottom: 344px;
@@ -98,7 +97,7 @@
   text-align: center;
   padding: 0;
   margin: 0;
-  padding-top: 25px;
+  padding-top: 18px;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
@@ -126,7 +125,14 @@
   }
 }
 
-.modal__button--error {
+.modal__button--ok {
   font-size: 18px;
   line-height: 26px;
+  margin-top: 22px;
+  width: 180px;
+
+  @media (min-width: @tablet-width) {
+    width: 272px;
+    font-size: 21px;
+  }
 }

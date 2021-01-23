@@ -1,47 +1,49 @@
-const submit = document.querySelector(".page-form__button");
-const modalSucces = document.querySelector(".modal-success");
-const modalError = document.querySelector(".modal-error");
-const modalClose = document.querySelector(".modal__button--close");
+const loginForm = document.querySelector(".page-form__login");
 const loginName = document.querySelector(".page-form__field--name");
 const loginSurname = document.querySelector(".page-form__field--surname");
 const loginPhone = document.querySelector(".page-form__field--phone");
 const loginEmail = document.querySelector(".page-form__field--email");
+const buttonForm = document.querySelector (".page-form__button");
+const modalSuccess = document.querySelector(".modal-success");
+const modalError = document.querySelector(".modal-error");
+const modalClose = document.querySelector(".modal__button--close");
+const buttonOk = document.querySelector(".modal__button--ok");
 
-
-let isStorageSupport = true;
-let storage = "";
-
-try {
-  storage = localStorage.getItem("login");
-} catch (err) {
-  isStorageSupport = false;
-}
-
-submit.addEventListener("submit", function (evt){
+loginForm.addEventListener("submit", function(evt) {
   if (!loginName.value || !loginSurname.value) {
     evt.preventDefault();
     modalError.classList.add("modal-show");
+    loginName.classList.add("page-form__field--error");
+    loginSurname.classList.add("page-form__field--error");
   } else {
-    if (isStorageSupport) {
-      localStorage.setItem("login", loginName.value);
-      modalSucces.classList.add("modal-show");
-    }
+    evt.preventDefault();
+    modalSuccess.classList.add("modal-show");
+    loginName.classList.remove("page-form__field--error");
+    loginSurname.classList.remove("page-form__field--error");
   }
 });
 
 modalClose.addEventListener("click", function(evt){
   evt.preventDefault();
-  modalSuccess.classList.remove("modal-show");
-  modalError.classList.remove("modal-show");
+  if (modalSuccess.classList.contains("modal-show")) {
+    modalSuccess.classList.remove("modal-show");
+  }
+});
+
+buttonOk.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  if (modalError.classList.contains("modal-show")) {
+    modalError.classList.remove("modal-show");
+  }
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (modalSucces.classList.contains("modal-show") ||
-    (modalError.classList.contains("modal-show") {
+    if (modalSuccess.classList.contains("modal-show")) {
       evt.preventDefault();
-      modalSucces.classList.remove("modal-show");
-      modalError.classList.remove("modal-show");
+      modalSuccess.classList.remove("modal-show");
+    } else if (modalError.classList.contains("modal-show")) {
+        modalError.classList.remove("modal-show");
     }
   }
 });
