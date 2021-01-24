@@ -23,7 +23,7 @@ navToggle.addEventListener("click", function() {
   }
 });
 
-if (loginForm) {
+if (buttonForm) {
   loginForm.addEventListener("submit", function(evt) {
   if (!loginName.value || !loginSurname.value) {
     evt.preventDefault();
