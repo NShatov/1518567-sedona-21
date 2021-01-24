@@ -23,7 +23,8 @@ navToggle.addEventListener("click", function() {
   }
 });
 
-loginForm.addEventListener("submit", function(evt) {
+if (loginForm) {
+  loginForm.addEventListener("submit", function(evt) {
   if (!loginName.value || !loginSurname.value) {
     evt.preventDefault();
     modalError.classList.add("modal-show");
@@ -61,3 +62,8 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+} else {
+  console.log("На странице отсутсвует форма!");
+}
+
+
