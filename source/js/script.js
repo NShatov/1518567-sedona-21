@@ -1,18 +1,5 @@
-const navMain = document.querySelector('.main-nav');
-const navToggle = document.querySelector('.main-nav__toggle');
-
-navMain.classList.remove('main-nav--nojs');
-
-navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
-  } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
-  }
-});
-
+const navMain = document.querySelector(".main-nav");
+const navToggle = document.querySelector(".main-nav__toggle");
 const loginForm = document.querySelector(".page-form__login");
 const loginName = document.querySelector(".page-form__field--name");
 const loginSurname = document.querySelector(".page-form__field--surname");
@@ -23,6 +10,18 @@ const modalSuccess = document.querySelector(".modal-success");
 const modalError = document.querySelector(".modal-error");
 const modalClose = document.querySelector(".modal__button--close");
 const buttonOk = document.querySelector(".modal__button--ok");
+
+navMain.classList.remove("main-nav--nojs");
+
+navToggle.addEventListener("click", function() {
+  if (navMain.classList.contains("main-nav--closed")) {
+    navMain.classList.remove("main-nav--closed");
+    navMain.classList.add("main-nav--opened");
+  } else {
+    navMain.classList.add("main-nav--closed");
+    navMain.classList.remove("main-nav--opened");
+  }
+});
 
 loginForm.addEventListener("submit", function(evt) {
   if (!loginName.value || !loginSurname.value) {
