@@ -129,16 +129,21 @@
 }
 
 .page-form__field:hover {
-    background-color: @border_form;
-  }
+  background-color: @border_form;
+}
 
-  .page-form__field:focus {
-    background-color: @white;
-    outline: 4px solid @border_form;
-    outline-offset: -4px;
-    line-height: 26px;
-    font-size: 18px;
-  }
+.page-form__field:focus {
+  background-color: @white;
+  outline: 4px solid @border_form;
+  outline-offset: -4px;
+  line-height: 26px;
+  font-size: 18px;
+}
+
+.page-form__field--error {
+  outline: 4px solid @form_error;
+  outline-offset: -4px;
+}
 
 .page-form__fieldset--contacts {
   grid-area: contacts;
