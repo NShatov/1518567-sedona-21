@@ -81,11 +81,18 @@
 
 .page-footer__copyright {
   display: flex;
-  justify-content: center;
   position: relative;
+  justify-content: center;
+  width: 150px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .copyright__link {
+  display: block;
   color: @black;
 
   &:hover {
@@ -100,7 +107,7 @@
 .page-footer__icon {
   position: absolute;
   top: -4px;
-  right: 27%;
+  right: 4%;
   fill: currentColor;
 
   @media (min-width: @tablet-width) {
