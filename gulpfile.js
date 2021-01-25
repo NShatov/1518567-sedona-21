@@ -100,6 +100,7 @@ exports.sprite = sprite;
 const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
+    "source/css/*.css",
     "source/*.ico"
   ], {
     base: "source"
@@ -115,6 +116,8 @@ exports.copy = copy;
 const clean = () => {
   return del("build");
 };
+
+exports.clean = clean;
 
 // Server
 
@@ -133,19 +136,25 @@ const server = (done) => {
 exports.server = server;
 
 // Reload
-
+/*
 const reload = done => {
   sync.reload();
   done();
 }
-
+*/
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/*.html", gulp.series(html, sync.reload));
 }
+
+
+//const watcher = () => {
+ // gulp.watch("source/less/**/*.less", gulp.series(styles));
+ // gulp.watch("source/js/script.js", gulp.series(scripts));
+ // gulp.watch("source/*.html", gulp.series(html, reload));
+//}
 
 // Build
 
@@ -159,7 +168,8 @@ const build = gulp.series(
     copy,
     images,
     createWebp
-  ));
+  )
+);
 
 exports.build = build;
 
@@ -179,4 +189,5 @@ exports.default = gulp.series(
   gulp.series(
     server,
     watcher
-  ));
+  )
+);
