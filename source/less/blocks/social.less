@@ -1,0 +1,32 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.social__icon {
+  fill: @white;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+  background-color: @bg_blue;
+  margin-right: 6px;
+
+  &:hover {
+    background-color: @link_hover;
+  }
+
+  &:active {
+    background-color: @link_active;
+
+    .social__icon {
+      fill: fade(@white, 30%);
+    }
+  }
+}

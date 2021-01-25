@@ -65,5 +65,3 @@ window.addEventListener("keydown", function (evt) {
 } else {
   console.log("На странице отсутствует форма!");
 }
-
-
