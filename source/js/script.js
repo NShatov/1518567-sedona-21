@@ -8,8 +8,8 @@ const loginEmail = document.querySelector(".page-form__field--email");
 const buttonForm = document.querySelector (".page-form__button");
 const modalSuccess = document.querySelector(".modal-success");
 const modalError = document.querySelector(".modal-error");
-const modalClose = document.querySelector(".modal__button--close");
-const buttonOk = document.querySelector(".modal__button--ok");
+const modalClose = document.querySelector(".modal__button-close");
+const buttonOk = document.querySelector(".modal__button-ok");
 
 navMain.classList.remove("main-nav--nojs");
 
