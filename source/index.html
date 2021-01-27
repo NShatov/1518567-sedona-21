@@ -6,6 +6,27 @@
     <title>HTML Academy: Седона</title>
     <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
+    <style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    background-image: url("img/index_mobile.jpg");
+  }
+  /* Tablet */
+  @media (min-width: 768px) {
+    HTML {
+      background-image: url("img/index_tablet.jpg");
+    }
+  }
+  /* Desktop */
+  @media (min-width: 1200px) {
+    HTML {
+      background-image: url("img/index_desktop.jpg");
+    }
+  }
+</style>
+<link href="css/pixel-glass/styles.css" rel="stylesheet">
+<script src="css/pixel-glass/script.js"></script>
   </head>
   <body class="page__body">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
